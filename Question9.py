@@ -75,30 +75,12 @@ def legendrePolynomials(l:int, x:list) -> list:
     
     return a_0*legendre
 
-################################# MÅ FIKSE DENNE #################################
-x = np.linspace(-1, 1, num=50)
-i = 3
-#test1 = legendrePolynomials(i, x)
-#plt.plot(x, test1, label=f"i = {i}")
 
+# Pringing the first 6 Legendre polynomials
+x = np.linspace(-1, 1, num=50)
 for i in range(6):
     plt.plot(x, legendrePolynomials(i, x), label=f"$P_{i}$")
 plt.xlim(-1, 1)
 plt.ylim(-1.1, 1.1)
-plt.grid()
 plt.legend()
 plt.show()
-
-
-"""arr = [[1,2,3],
-      [4,5,6],
-      [7,8,9]]
-
-summation = []
-for i in range(len(arr)):
-    sum_i = 0
-    for j in range(len(arr[0])):
-        sum_i += arr[j][i]
-    summation.append(sum_i)
-
-print(summation)"""
